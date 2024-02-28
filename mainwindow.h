@@ -19,9 +19,8 @@ public:
     ~MainWindow();
 
 private slots:
-    QList<int> getKeys(QString);
-    QStringList getBlocks(QString, int);
-    bool keysValidator(QStringList);
+    int getKey(QString);
+    QString toCeasar(QString, int);
 
     void encrypt();
     void unencrypt();
@@ -36,6 +35,8 @@ private:
 
     QMap<QChar, int> unencryptedMap;
     QMap<QChar, int> encryptedMap;
+
+    const QString ALPHABET = "АБВГДЕЁЖЗИЙКЛМНОПРСТУФХЦЧШЩЪЫЬЭЮЯ ";
 };
 
 #endif // MAINWINDOW_H

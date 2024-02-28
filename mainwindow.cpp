@@ -35,8 +35,13 @@ QString MainWindow::toCeasar(QString text, int key) {
     for (QChar letter : text) {
         int index = ALPHABET.indexOf(letter.toUpper());
         if (index != -1) {
-            int newKey = (index + key) % ALPHABET.length();
-            encryptedText += ALPHABET[newKey];
+            int newKey = (index + key);
+
+            while (newKey < 0){
+                newKey += ALPHABET.length();
+            }
+
+            encryptedText += ALPHABET[newKey % ALPHABET.length()];
         } else {
             return "";
         }
