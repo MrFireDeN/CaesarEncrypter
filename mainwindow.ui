@@ -6,8 +6,8 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>800</width>
-    <height>600</height>
+    <width>932</width>
+    <height>679</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -92,38 +92,23 @@
     <item row="2" column="0">
      <widget class="QWidget" name="Encryption" native="true">
       <layout class="QGridLayout" name="gridLayout">
-       <item row="1" column="1">
-        <widget class="QLineEdit" name="keysToCrypt">
-         <property name="text">
-          <string>0</string>
+       <item row="2" column="2">
+        <spacer name="horizontalSpacer_12">
+         <property name="orientation">
+          <enum>Qt::Horizontal</enum>
          </property>
-        </widget>
+         <property name="sizeType">
+          <enum>QSizePolicy::Expanding</enum>
+         </property>
+         <property name="sizeHint" stdset="0">
+          <size>
+           <width>40</width>
+           <height>20</height>
+          </size>
+         </property>
+        </spacer>
        </item>
-       <item row="1" column="0">
-        <widget class="QLabel" name="labelKeys_1">
-         <property name="text">
-          <string>Ключ</string>
-         </property>
-        </widget>
-       </item>
-       <item row="3" column="0">
-        <widget class="QLabel" name="labelMessege_1">
-         <property name="text">
-          <string>Зашиврованное сообщение</string>
-         </property>
-        </widget>
-       </item>
-       <item row="0" column="1" colspan="2">
-        <widget class="QLineEdit" name="textUnencrypted">
-         <property name="inputMask">
-          <string/>
-         </property>
-         <property name="text">
-          <string/>
-         </property>
-        </widget>
-       </item>
-       <item row="3" column="1" colspan="2">
+       <item row="5" column="1" colspan="2">
         <widget class="QLineEdit" name="messageEncrypted"/>
        </item>
        <item row="2" column="0">
@@ -149,21 +134,12 @@
          </property>
         </widget>
        </item>
-       <item row="2" column="2">
-        <spacer name="horizontalSpacer_12">
-         <property name="orientation">
-          <enum>Qt::Horizontal</enum>
+       <item row="1" column="1">
+        <widget class="QLineEdit" name="keysToCrypt">
+         <property name="text">
+          <string>ЖЕЗЛ</string>
          </property>
-         <property name="sizeType">
-          <enum>QSizePolicy::Expanding</enum>
-         </property>
-         <property name="sizeHint" stdset="0">
-          <size>
-           <width>40</width>
-           <height>20</height>
-          </size>
-         </property>
-        </spacer>
+        </widget>
        </item>
        <item row="2" column="1">
         <widget class="QPushButton" name="btnEncrypt">
@@ -172,38 +148,61 @@
          </property>
         </widget>
        </item>
+       <item row="5" column="0">
+        <widget class="QLabel" name="labelMessege_1">
+         <property name="text">
+          <string>Зашиврованное сообщение</string>
+         </property>
+        </widget>
+       </item>
+       <item row="1" column="0">
+        <widget class="QLabel" name="labelKeys_1">
+         <property name="text">
+          <string>Ключ</string>
+         </property>
+        </widget>
+       </item>
+       <item row="0" column="1" colspan="2">
+        <widget class="QLineEdit" name="textUnencrypted">
+         <property name="inputMask">
+          <string/>
+         </property>
+         <property name="text">
+          <string>МЕЛ ЕМЕЛЯ ЕЛ В МЕЛЬНИЦЕ</string>
+         </property>
+        </widget>
+       </item>
+       <item row="3" column="0" colspan="3">
+        <widget class="QTableWidget" name="tableWidget">
+         <property name="editTriggers">
+          <set>QAbstractItemView::NoEditTriggers</set>
+         </property>
+         <property name="columnCount">
+          <number>6</number>
+         </property>
+         <attribute name="horizontalHeaderCascadingSectionResizes">
+          <bool>true</bool>
+         </attribute>
+         <column/>
+         <column/>
+         <column/>
+         <column/>
+         <column/>
+         <column/>
+        </widget>
+       </item>
       </layout>
      </widget>
     </item>
     <item row="2" column="2">
      <widget class="QWidget" name="Unencryption" native="true">
       <layout class="QGridLayout" name="gridLayout_2">
-       <item row="0" column="0">
-        <widget class="QLabel" name="labelText_2">
+       <item row="1" column="1">
+        <widget class="QLineEdit" name="keysToUnencrypt">
          <property name="text">
-          <string>Текст сообщения</string>
+          <string>ЖЕЗЛ</string>
          </property>
         </widget>
-       </item>
-       <item row="2" column="1">
-        <widget class="QPushButton" name="btnUnencrypt">
-         <property name="text">
-          <string>Расшифровать</string>
-         </property>
-        </widget>
-       </item>
-       <item row="2" column="0">
-        <spacer name="horizontalSpacer_21">
-         <property name="orientation">
-          <enum>Qt::Horizontal</enum>
-         </property>
-         <property name="sizeHint" stdset="0">
-          <size>
-           <width>40</width>
-           <height>20</height>
-          </size>
-         </property>
-        </spacer>
        </item>
        <item row="2" column="2">
         <spacer name="horizontalSpacer_22">
@@ -218,6 +217,20 @@
          </property>
         </spacer>
        </item>
+       <item row="0" column="0">
+        <widget class="QLabel" name="labelText_2">
+         <property name="text">
+          <string>Текст сообщения</string>
+         </property>
+        </widget>
+       </item>
+       <item row="2" column="1">
+        <widget class="QPushButton" name="btnUnencrypt">
+         <property name="text">
+          <string>Расшифровать</string>
+         </property>
+        </widget>
+       </item>
        <item row="0" column="1" colspan="2">
         <widget class="QLineEdit" name="textEncrypted">
          <property name="inputMask">
@@ -228,6 +241,39 @@
          </property>
         </widget>
        </item>
+       <item row="3" column="1">
+        <spacer name="verticalSpacer">
+         <property name="orientation">
+          <enum>Qt::Vertical</enum>
+         </property>
+         <property name="sizeHint" stdset="0">
+          <size>
+           <width>20</width>
+           <height>40</height>
+          </size>
+         </property>
+        </spacer>
+       </item>
+       <item row="2" column="0">
+        <spacer name="horizontalSpacer_21">
+         <property name="orientation">
+          <enum>Qt::Horizontal</enum>
+         </property>
+         <property name="sizeHint" stdset="0">
+          <size>
+           <width>40</width>
+           <height>20</height>
+          </size>
+         </property>
+        </spacer>
+       </item>
+       <item row="4" column="0">
+        <widget class="QLabel" name="labelMessage_2">
+         <property name="text">
+          <string>Расшиврованное сообщение</string>
+         </property>
+        </widget>
+       </item>
        <item row="1" column="0">
         <widget class="QLabel" name="labelKeys_2">
          <property name="text">
@@ -235,21 +281,7 @@
          </property>
         </widget>
        </item>
-       <item row="1" column="1">
-        <widget class="QLineEdit" name="keysToUnencrypt">
-         <property name="text">
-          <string>0</string>
-         </property>
-        </widget>
-       </item>
-       <item row="3" column="0">
-        <widget class="QLabel" name="labelMessage_2">
-         <property name="text">
-          <string>Расшиврованное сообщение</string>
-         </property>
-        </widget>
-       </item>
-       <item row="3" column="1" colspan="2">
+       <item row="4" column="1" colspan="2">
         <widget class="QLineEdit" name="messageUnencrypted"/>
        </item>
       </layout>
@@ -290,7 +322,7 @@
     <rect>
      <x>0</x>
      <y>0</y>
-     <width>800</width>
+     <width>932</width>
      <height>22</height>
     </rect>
    </property>

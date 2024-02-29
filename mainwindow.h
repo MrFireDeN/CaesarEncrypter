@@ -20,12 +20,16 @@ public:
 
 private slots:
     int getKey(QString);
+    bool isValid(QString, QString);
+    QStringList getBlocks(QString, int);
     QString toCeasar(QString, int);
+    QStringList toCeasarShift(QStringList, QString, int);
 
     void encrypt();
     void unencrypt();
 
     void calculateFrequancy(QString, QString);
+    void fillTableData(QStringList, QStringList, QString);
 
     void on_btnEncrypt_clicked();
     void on_btnUnencrypt_clicked();
